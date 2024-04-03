@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="inner">
+  <div class="form-nav">
+  <div *ngIf="currentStep === 1">
+    <app-step1></app-step1>
+  </div>
+  <div *ngIf="currentStep === 2">
+    <app-step2></app-step2>
+  </div>
+  <div *ngIf="currentStep === 3">
+    <app-step3></app-step3>
+  </div>
+  <div *ngIf="currentStep === 4">
+    <app-step4></app-step4>
+  </div>
+
+
+</div>
+<button *ngIf="currentStep > 1" (click)="prevStep()">Previous</button>
+<button *ngIf="currentStep < 4" (click)="nextStep()">Next</button>
+</div>

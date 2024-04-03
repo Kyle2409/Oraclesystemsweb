@@ -1,0 +1,26 @@
+<h2>Personal Details</h2>
+<br>
+
+  
+  <div class="input-wrapper">
+    <label for="textfield1" [class.active]="textInput1">Fullname</label>
+    <input type="text" id="textfield1" [(ngModel)]="textInput1" name="textInput1">
+  </div>
+  <div class="input-wrapper">
+    <label for="textfield2" [class.active]="textInput2">Surname</label>
+    <input type="text" id="textfield2" [(ngModel)]="textInput2" name="textInput2">
+  </div>
+  <div class="dropdown-container">
+    <label for="dropdown">Select an option:</label>
+    <div class="custom-dropdown" [class.open]="isDropdownOpen">
+      <select id="dropdown" [(ngModel)]="selectedOption" (click)="toggleDropdown()">
+        <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+      </select>
+      <div class="dropdown-arrow" [class.rotate-up]="isDropdownOpen" (click)="toggleDropdown()"></div>
+    </div>
+  </div>
+  
+ 
+  
+  
+  

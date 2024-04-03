@@ -1,0 +1,407 @@
+/* Global styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-image: url(./assets/oracle-hero-slider-03.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .inner{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        .grouped-input{
+            display: flex;
+            gap: 50px;
+        }
+        h1 {
+            margin: 0;
+            padding-right: 80px;
+            background-size: 50px;
+            width: fit-content;
+            font-size: 45px;
+            span {
+              color: #9a7d45;
+            }
+            @media (max-height: 917px) {
+              font-size: 42px;
+            }
+            @media (max-height: 883px) {
+              margin-bottom: 15px;
+            }
+            @media (max-height: 805px) {
+              font-size: 40px;
+            }
+            @media (max-height: 783px) {
+              font-size: 38px;
+            }
+            @media (max-width: 779px) {
+              font-size: 40px;
+            }
+            @media (max-width: 556px) {
+              background-image: unset;
+            }
+          }
+          .form-nav {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            @media (max-width: 872px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            li {
+              list-style-type: none;
+              padding-left: 0;
+              width: fit-content;
+              position: relative;
+              z-index: 2;
+              cursor: pointer;
+              @media (max-width: 872px) {
+                margin-bottom: 10px;
+              }
+              @media (max-width: 872px) {
+                width: 33.333333%;
+              }
+              &:last-of-type {
+                i {
+                  &:after {
+                    display: none;
+                  }
+                }
+              }
+              i {
+                width: 44px;
+                height: 44px;
+                border-radius: 50px;
+                background-color: #2C2C2C;
+                display: block;
+                margin: 0 auto 5px;
+                border: 2px solid #2C2C2C;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 20px;
+                position: relative;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  height: 2px;
+                  width: 320%;
+                  background-color: #2c2c2c;
+                  top: 50%;
+                  left: 100%;
+                  transform: translateY(-50%);
+                  z-index: -1;
+                }
+                @media (max-width: 872px) {
+                  &:after {
+                    display: none;
+                  }
+                }
+                &.active {
+                  border-color:#9f834b;
+                }
+                &.finish {
+                  background-color: #9f834b;
+                  border-color:#9f834b;
+                  &:after {
+                    background-color: #9f834b;
+                  }
+                }
+                &[rel="details"] {
+
+                  background-size: 24px;
+                }
+                &[rel="visuals"] {
+                
+                  background-size: 26px;
+                }
+                &[rel="pDetails"] {
+               
+                  background-size: 18px;
+                }
+                &[rel="payment"] {
+      
+                  background-size: 20px;
+                }
+                &[rel="complete"] {
+
+                  background-size: 20px;
+                }
+              }
+              &.error {
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: -30%;
+                  right: 6%;
+                  display: block;
+                  width: 20px;
+                  height: 20px;
+
+                }
+              }
+              span {
+                font-size: 14px;
+                display: block;
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+      }
+  }
+  
+  
+  
+  /* Step components styles */
+  
+  .step {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: right;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Navigation buttons */
+  
+  .nav-buttons {
+    margin-top: 20px;
+  }
+  
+  .nav-buttons button {
+    margin-right: 10px;
+  }
+  /* Style the select element */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Style the options within the select element */
+  select option {
+    background-color: #fff; /* Background color of each option */
+    color: #333; /* Text color of each option */
+  }
+  
+  /* Style the dropdown arrow */
+  select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+  }
+  
+  select::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
+  }
+  
+  /* Style the selected option display */
+  .selected-option {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* Hide the arrows in the dropdown field */
+select {
+    /* Hide arrows for most browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Hide arrow in Internet Explorer */
+    scrollbar-width: none; /* For Firefox */
+    -ms-expand: none; /* For Internet Explorer */
+  }
+  
+  /* Style the custom arrow */
+  select::after {
+    content: ''; /* Remove any existing content */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333; /* Customize the arrow color */
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't intercept clicks */
+  }
+  /* Style the dropdown container */
+.dropdown-container {
+    position: relative;
+  }
+  
+  /* Style the select element */
+  select {
+    width: calc(100% - 20px); /* Adjust width to account for arrow */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Style the custom dropdown */
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Style the dropdown arrow */
+  .dropdown-arrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; /* Change color to black */
+    transform: translateY(-50%);
+    transition: transform 0.3s; /* Add transition for smooth rotation */
+  }
+  
+  /* Rotate arrow when dropdown is open */
+  .custom-dropdown.open .dropdown-arrow {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* Style the selected option display */
+  .selected-option {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .dropdown-arrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; /* Change color to black */
+    transform: translateY(-50%) rotateX(180deg); /* Initially rotate arrow downwards */
+    transition: transform 0.3s; /* Add transition for smooth rotation */
+  }
+  
+  /* Rotate arrow upwards when dropdown is open */
+  .custom-dropdown.open .dropdown-arrow {
+    transform: translateY(-50%) rotateX(0deg); /* Rotate arrow upwards */
+  }
+
+  /* Style the dropdown arrow */
+  .dropdown-arrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; /* Change color to black */
+    transform: translateY(-50%);
+    transition: transform 0.3s; /* Add transition for smooth rotation */
+  }
+  
+  /* Rotate arrow upwards when dropdown is open */
+  .rotate-up {
+    transform: translateY(-50%) rotateX(180deg);
+  }
+  
+  .input-wrapper {
+    display: flex;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 20px; /* Add spacing between fields */
+  }
+  
+  .input-wrapper label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+    transition: top 0.3s, font-size 0.3s;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .input-wrapper input:focus + label {
+    top: 0;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .input-wrapper label.active {
+    top: 0;
+    font-size: 12px;
+    color: #333;
+  }
+  
