@@ -1,2 +1,17 @@
-<h2>Step 2</h2>
-<p>This is step 2 content.</p>
+<h2>Upload Documents</h2>
+<br>
+
+<div class="input-wrapper">
+  <input type="file" (change)="onFileSelected($event)">
+  <button (click)="uploadFile()">Upload</button>
+</div>
+
+
+
+<div *ngIf="uploadProgress !== null">
+  <p>Upload Progress: {{ uploadProgress }}%</p>
+</div>
+
+<div *ngIf="fileUploadSuccess">
+  <p>File uploaded successfully!</p>
+</div>

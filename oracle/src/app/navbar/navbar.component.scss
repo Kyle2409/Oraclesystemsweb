@@ -17,7 +17,7 @@
   }
   
   header {
-    background-color: #006c8749;
+    background-color: #006c8710;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -26,6 +26,8 @@
   
   .nav-area {
     list-style: none;
+    align-content: center;
+   
   }
   
   .nav-area > li {
@@ -34,11 +36,11 @@
   }
   
   .nav-area li a, h3{
-    color: #fff;
+    color: #1b75bc;
   }
   
   .nav-area li a:hover {
-    color: #006c87;
+    color: #ffffff;
   }
   
   .btn-area {
@@ -49,10 +51,26 @@
     text-transform: uppercase;
     padding: 10px 30px;
     border-radius: 5px;
-    background-color: #006c87;
+    background-color: #1b75bc;
   }
   
   .logo {
     height: 40px;
     width: 40px;
+  }
+
+  nav{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxing;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .logo{
+    width: 180px;
   }

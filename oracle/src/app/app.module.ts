@@ -13,6 +13,12 @@ import { Step2Component } from './step2/step2.component';
 import { Step3Component } from './step3/step3.component';
 import { Step4Component } from './step4/step4.component';
 import { FooterComponent } from './footer/footer.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { CommonModule } from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     Step2Component,
     Step3Component,
     Step4Component,
-    FooterComponent
+    FooterComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +37,15 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     NgbModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    CommonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

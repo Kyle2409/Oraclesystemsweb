@@ -11,6 +11,14 @@ export class Step1Component {
   isDropdownOpen = false;
   textInput1: string = '';
   textInput2: string = '';
+  email: string = '';
+  phone: string = '';
+  dob: Date | null = null;
+  gender: string = '';
+  address: string = '';
+  city: string = '';
+  province: string = '';
+  postalcode: string = '';
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }

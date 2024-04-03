@@ -1,2 +1,57 @@
-<h2>Step 3</h2>
-<p>This is step 3 content.</p>
+<h2>Personal Details</h2>
+<br>
+
+<div class="input-wrapper">
+  <div class="input-group equal-width">
+    <label for="textfield1" [class.active]="textInput1">Fullname</label>
+    <input type="text" id="textfield1" [(ngModel)]="textInput1" name="textInput1">
+  </div>
+  <div class="input-group equal-width">
+    <label for="textfield2" [class.active]="textInput2">Surname</label>
+    <input type="text" id="textfield2" [(ngModel)]="textInput2" name="textInput2">
+  </div>
+</div>
+<div class="input-wrapper">
+  <div class="input-group equal-width">
+    <label for="email" [class.active]="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email">
+  </div>
+  <div class="input-group equal-width">
+    <label for="phone" [class.active]="phone">Phone</label>
+    <input type="tel" id="phone" [(ngModel)]="phone" name="phone">
+  </div>
+</div>
+<div class="input-wrapper">
+  <div class="input-group equal-width">
+    <label for="dob" [class.active]="dob">Date of Birth</label>
+    <input type="date" id="dob" [(ngModel)]="dob" name="dob">
+  </div>
+  <div class="input-group equal-width">
+    <label for="gender" [class.active]="gender">Gender</label>
+    <select id="gender" [(ngModel)]="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+</div>
+<div class="input-wrapper">
+  <div class="input-group equal-width">
+    <label for="address" [class.active]="address">Address</label>
+    <input type="text" id="address" [(ngModel)]="address" name="address">
+  </div>
+  <div class="input-group equal-width">
+    <label for="city" [class.active]="city">City</label>
+    <input type="text" id="city" [(ngModel)]="city" name="city">
+  </div>
+</div>
+<div class="input-wrapper">
+  <div class="input-group equal-width">
+    <label for="province" [class.active]="province">Province</label>
+    <input type="text" id="province" [(ngModel)]="province" name="province">
+  </div>
+  <div class="input-group equal-width">
+    <label for="postalcode" [class.active]="postalcode">Postal Code</label>
+    <input type="text" id="postalcode" [(ngModel)]="postalcode" name="postalcode">
+  </div>
+</div>

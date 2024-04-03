@@ -6,12 +6,13 @@ body {
     font-family: 'Lato', sans-serif;
     background-image: url(./assets/oracle-hero-slider-03.png);
     height: 100vh;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
+   
     .inner{
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
         .grouped-input{
@@ -47,7 +48,6 @@ body {
             }
           }
           .form-nav {
-            max-width: 700px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -377,31 +377,101 @@ select {
   }
   
   .input-wrapper label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
+    top: 10px; /* Adjust to position label above input */
     color: #888;
     transition: top 0.3s, font-size 0.3s;
+    pointer-events: none; /* Ensure that label doesn't interfere with input */
+    z-index: 1; /* Ensure label is above input */
   }
   
   .input-wrapper input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    position: relative;/* Ensure z-index works correctly */
   }
   
-  .input-wrapper input:focus + label {
-    top: 0;
-    font-size: 12px;
-    color: #333;
+  /* Adjust label position when input has value */
+  .input-wrapper input:not(:placeholder-shown) + label {
+    top: -20px; /* Adjust as needed to float label outside */
+    font-size: 12px; /* Adjust as needed */
+    background-color: white;
+    padding: 0 5px;
   }
   
-  .input-wrapper label.active {
-    top: 0;
-    font-size: 12px;
-    color: #333;
+  /* Add a border-bottom when input is focused */
+  .input-wrapper input:focus {
+    border-bottom: 2px solid blue; /* Adjust color as needed */
   }
   
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-group.equal-width {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.input-group.equal-width:last-child {
+  margin-right: 0;
+}
+
+.hero-container {
+  background-image: linear-gradient(#283968, #2d9ccc00); /* You can use any color you prefer */
+  color: white; /* Text color */
+  padding: 50px; /* Adjust padding as needed */
+  text-align: left;
+  margin: 0 auto;
+  .text{
+    max-width: 1200px;
+    margin: 0 auto;
+    h1{
+      font-size: 50px;
+    }
+    p{
+      width: 800px;
+    }
+  }
+}
+
+.card-processing {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .processing-info {
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+    }
+    
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      
+      li {
+        list-style-type: disc;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
